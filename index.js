@@ -33,7 +33,7 @@ class LengthControl extends React.Component {
                     >
                         <i class="fa-solid fa-plus"></i>
                     </button>
-                    <div id={this.props.lengthId}>{this.props.length}</div>
+                    <div id={this.props.lengthId}><h3>{this.props.length}</h3></div>
                     <button
                         id={this.props.decrementId}
                         value="-"

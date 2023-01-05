@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
+$theme-color: #25160f;
+$subtheme-color: cornsilk;
+
 * {
   margin: 0;
   user-select: none;
@@ -7,33 +10,51 @@
 
 body {
   font-family: Comfortaa, sans-serif;
-  color: antiquewhite;
+  color: $subtheme-color;
   height: 100vh;
-  background-color: #300f00;
+  background-color: $theme-color;
   display: flex;
   justify-content: center;
   align-items: center;
+  #app {
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 h2 {
+  text-align: center;
   margin: 20px;
-  font-size: 2.5rem;
+  font-size: 5rem;
   text-decoration: underline;
+  margin-bottom: 2rem;
 }
 
 h3 {
+  font-size: 2rem;
   margin: 20px;
   text-align: center;
 }
 
 button {
+  border-radius: 5px;
   border: none;
   outline: none;
-  background-color: #300f00;
+  background-image: linear-gradient(
+    to right,
+    #363636,
+    $subtheme-color 5%,
+    $subtheme-color 95%,
+    #363636 100%
+  );;
+  height: 25px;
   cursor: pointer;
-  margin: 0 3px;
+  margin: 3px;
   i {
-    color: #ff4d00;
+    color: rgb(0, 0, 0);
     pointer-events: none;
     font-size: 1.2rem;
   }
@@ -46,28 +67,45 @@ button {
   #length-controls-box{
     display: flex;
     margin: 20px;
+    width: 60vw;
+    justify-content: space-between;
     .length-control-boxes {
-      border: 2px solid white;
-      border-radius: 5px;
-      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: space-around;
+      justify-content: center;
+      border: 3px solid $subtheme-color;
+      border-radius: 10px;
+      width: 350px;
+      height: 200px;
       margin: 0 20px;
       .length-controls {
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
-        margin: 20px;
+        align-items: center;
+        margin: 0 20px;
+        #session-length, #break-length {
+          display: flex;
+          align-items: center;
+          margin: 0 10px;
+        }
       }
     }
   }
   
   #timer-big-box {
     display: flex;
-    width: 200px;
-    justify-content: space-between;
-    border: 2px solid white;
-    border-radius: 5px;
+    width: 350px;
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid $subtheme-color;
+    border-radius: 10px;
     margin: 20px;
-    padding: 20px;
+    #start_stop, #reset {
+      height: 30px;
+    }
     #timer-box {
       display: flex;
       flex-direction: column;
