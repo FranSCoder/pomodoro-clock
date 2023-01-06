@@ -61,7 +61,7 @@ button i {
 #clock #length-controls-box {
   display: flex;
   margin: 20px;
-  width: 60vw;
+  width: 600px;
   justify-content: space-between;
 }
 #clock #length-controls-box .length-control-boxes {
@@ -110,4 +110,28 @@ button i {
 }
 #clock #timer-big-box #timer-box h3 {
   margin: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 3.5rem;
+    width: 300px;
+  }
+  #clock #length-controls-box {
+    margin: 0;
+    width: 375px;
+    justify-content: center;
+  }
+  #clock #length-controls-box .length-control-boxes {
+    margin: 0 10px;
+  }
+  #clock #length-controls-box .length-control-boxes h3 {
+    margin: 20px 10px;
+  }
+  #clock #length-controls-box .length-control-boxes .length-controls {
+    margin: 0;
+  }
+  #clock #length-controls-box .length-control-boxes .length-controls #session-length, #clock #length-controls-box .length-control-boxes .length-controls #break-length {
+    margin: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -67,7 +67,7 @@ button {
   #length-controls-box{
     display: flex;
     margin: 20px;
-    width: 60vw;
+    width: 600px;
     justify-content: space-between;
     .length-control-boxes {
       display: flex;
@@ -115,6 +115,33 @@ button {
       }
       h3 {
         margin: 15px
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 3.5rem;
+    width: 300px;
+  }
+
+  #clock{
+    #length-controls-box {
+      margin: 0;
+      width: 375px;
+      justify-content: center;
+      .length-control-boxes {
+        margin: 0 10px;
+        h3 {
+          margin: 20px 10px;
+        }
+        .length-controls {
+          margin: 0;
+          #session-length, #break-length {
+            margin: 0;
+          }
+        }
       }
     }
   }
